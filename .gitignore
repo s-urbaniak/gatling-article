@@ -2,3 +2,4 @@
 .DS*
 *.html
 results
+.ipynb_checkpoints/
