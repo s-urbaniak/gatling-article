@@ -33,9 +33,10 @@ Let's denote this very atomic request execution with a simple red dot:
 ## Scenarios
 
 The whole purpose of a load meter tool is to execute multiple requests. 
-Multiple atomic requests can be executed in the context of a scenario. A  
-scenario is a series of executions for one user. They can be constructed
-using the available methods in the Loops trait:
+Multiple atomic requests can be executed in the context of a scenario. A 
+scenario is a series of executions for one user. They can be constructed using 
+the available methods in the Loops trait. For the sake of gentle introduction 
+I'd like to show the following methods only:
 
 - repeat(n times): executes a unit exactly n times (regardless of the needed 
 time)
