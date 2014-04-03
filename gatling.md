@@ -172,10 +172,10 @@ single request:
 
     val onceScn = scenario("once").exec(req)
 
-Then you have to inject users. Using the atOnceInj injection doesn't make much 
-sense in constant load scenarios because they behave like pulses. A 
-constantRate injection on the other hand produces a constant load on the 
-server. Each second x users are injected resulting in x new requests/second:
+Then you have to inject users. Using the atOnceInj injection doesn't make much
+sense in constant load scenarios because they behave like pulses. A constantRate
+injection on the other hand produces a constant load on the server. Each second
+x users are injected resulting in x new requests/second:
 
 	val onceScn = scenario("once").exec(req)
 	val constInj = constantRate(3 usersPerSec) during (5 seconds)
@@ -195,9 +195,9 @@ reflected in the following empirical measurements:
 
 ![](constantRate3_constant.png)
 
-Similarly the ramp injection can be used to generate the same sort of constant 
-load simulation. In this case one has to ramp 15 users over 5 seconds to 
-generate a constant load of 3 requests/sec, which is reflected in the following 
+Similarly the ramp injection can be used to generate the same sort of constant
+load simulation. In this case one has to ramp 15 users over 5 seconds to
+generate a constant load of 3 requests/sec, which is reflected in the following
 measurements:
 
     val onceScn = scenario("once").exec(req)
